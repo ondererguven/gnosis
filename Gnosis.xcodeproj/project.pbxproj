@@ -14,6 +14,9 @@
 		ECC5275322B8262D00B2AE20 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275222B8262D00B2AE20 /* Network.swift */; };
 		ECC5275522B828EB00B2AE20 /* BalanceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275422B828EB00B2AE20 /* BalanceRequest.swift */; };
 		ECC5275722B82BC200B2AE20 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275622B82BC200B2AE20 /* SetupViewController.swift */; };
+		ECC5275922B8E12800B2AE20 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275822B8E12800B2AE20 /* RoundedButton.swift */; };
+		ECC5275B22B8E2A800B2AE20 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275A22B8E2A800B2AE20 /* Account.swift */; };
+		ECC5275D22B8EA7900B2AE20 /* BalanceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275C22B8EA7900B2AE20 /* BalanceResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		ECC5275222B8262D00B2AE20 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		ECC5275422B828EB00B2AE20 /* BalanceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceRequest.swift; sourceTree = "<group>"; };
 		ECC5275622B82BC200B2AE20 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		ECC5275822B8E12800B2AE20 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		ECC5275A22B8E2A800B2AE20 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		ECC5275C22B8EA7900B2AE20 /* BalanceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 		ECC5274E22B81DFA00B2AE20 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				ECC5275A22B8E2A800B2AE20 /* Account.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -81,6 +88,7 @@
 		ECC5274F22B81E0100B2AE20 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ECC5275822B8E12800B2AE20 /* RoundedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -98,6 +106,7 @@
 			children = (
 				ECC5275222B8262D00B2AE20 /* Network.swift */,
 				ECC5275422B828EB00B2AE20 /* BalanceRequest.swift */,
+				ECC5275C22B8EA7900B2AE20 /* BalanceResponse.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -174,9 +183,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECC5275722B82BC200B2AE20 /* SetupViewController.swift in Sources */,
+				ECC5275922B8E12800B2AE20 /* RoundedButton.swift in Sources */,
 				ECC5275322B8262D00B2AE20 /* Network.swift in Sources */,
 				ECC5273D22B81CAB00B2AE20 /* AppDelegate.swift in Sources */,
 				ECC5275522B828EB00B2AE20 /* BalanceRequest.swift in Sources */,
+				ECC5275B22B8E2A800B2AE20 /* Account.swift in Sources */,
+				ECC5275D22B8EA7900B2AE20 /* BalanceResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

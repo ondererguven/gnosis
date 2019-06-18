@@ -10,18 +10,47 @@ import UIKit
 
 class SetupViewController: UIViewController {
     
-    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var addressTextView: UITextView!
     
-    @IBOutlet weak var responseLabel: UILabel!
-    
-    @IBAction func getBalance(_ sender: UIButton) {
-        let balanceRequest = BalanceRequest(address: addressTextField.text!)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
-        let networkOperator = NetworkOperator()
-        networkOperator.execute(request: balanceRequest)
-        { (data) in
-            DispatchQueue.main.async {
-                self.responseLabel.text = "\(data)"
+        addressTextView.becomeFirstResponder()
+    }
+    
+    @IBAction func setup(_ sender: RoundedButton) {
+        guard let text = addressTextView.text else { return }
+        
+        let balanceRequest = BalanceRequest(address: text)
+        
+        NetworkOperator().execute(request: balanceRequest)
+        { (result) in
+            switch result {
+            case .success(let data):
+                do {
+                    let balanceResponse = try JSONDecoder().decode(BalanceResponse.self,
+                                                                   from: data)
+                    
+                    if balanceResponse.message == "OK" && balanceResponse.status == "1" {
+                        let account = Account(address: text,
+                                              balance: balanceResponse.amount)
+                        debugPrint(account)
+                    } else {
+                        DispatchQueue.main.async {
+                            let alertController = UIAlertController(title: "Oops", message: "Check the address please", preferredStyle: .alert)
+                            let okAction = UIAlertAction(title: "OK",
+                                                         style: .default,
+                                                         handler: nil)
+                            alertController.addAction(okAction)
+                            self.present(alertController, animated: true, completion: nil)
+                        }
+                    }
+                    
+                } catch {
+                    debugPrint(error)
+                }
+            case .failure(let error):
+                debugPrint(error)
             }
         }
     }

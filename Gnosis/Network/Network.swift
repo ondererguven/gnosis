@@ -8,12 +8,7 @@
 
 import Foundation
 
-enum HTTPMethod: String {
-    case get = "GET"
-}
-
 enum TransferProtocol: String {
-    case http = "http"
     case https = "https"
 }
 
@@ -33,27 +28,47 @@ protocol RequestDescribing {
     func buildURL() -> URL?
 }
 
+protocol ResponseDescribing {
+    var status: String { get set }
+    var message: String { get set }
+}
+
+enum RequestError: Error {
+    case badURL
+}
+
+enum ResponseError: Error {
+    case responseError
+    case noData
+}
+
 struct NetworkOperator {
     static let baseURL = "api-rinkeby.etherscan.io"
     static let apiKey = "WQUKAN7KFV9E16EAIS5NHZ76JX4ZFGBQ74"
     
     init() { }
     
-    func execute(request: RequestDescribing, completion: @escaping (([String : Any]?) -> Void)) {
+    func execute(request: RequestDescribing,
+                                        completion: @escaping ((Result<Data, Error>) -> Void))
+    {
         guard let requestURL = request.buildURL() else {
-            completion(nil)
+            completion(.failure(RequestError.badURL))
             return
         }
         
-        let dataTask = URLSession.shared.dataTask(with: requestURL) { (responseData, urlResponse, requestError) in
+        let dataTask = URLSession.shared.dataTask(with: requestURL) { (data, response, error) in
             
-            do {
-                let jsonData = try JSONSerialization.jsonObject(with: responseData!, options: .allowFragments) as! [String : Any]
-                
-                completion(jsonData)
-            } catch {
-                debugPrint(error.localizedDescription)
+            guard error == nil else {
+                completion(.failure(ResponseError.responseError))
+                return
             }
+            
+            guard let data = data else {
+                completion(.failure(ResponseError.noData))
+                return
+            }
+            
+            completion(.success(data))
         }
         
         dataTask.resume()
