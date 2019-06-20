@@ -1,0 +1,6 @@
+framework module Pods_Gnosis {
+  umbrella header "Pods-Gnosis-umbrella.h"
+
+  export *
+  module * { export * }
+}

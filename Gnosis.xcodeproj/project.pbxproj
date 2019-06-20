@@ -3,18 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EC8256AF22BBBBD20034A028 /* Result+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8256AE22BBBBD20034A028 /* Result+Extension.swift */; };
-		EC8256B122BBBDE40034A028 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8256B022BBBDE40034A028 /* Balance.swift */; };
+		ADFC47811C2603276F5CE49A /* Pods_Gnosis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3E2E7EFC7FB07834DE9447 /* Pods_Gnosis.framework */; };
+		EC60D92622BBCF440006A934 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC60D92522BBCF440006A934 /* Router.swift */; };
 		ECC5273D22B81CAB00B2AE20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5273C22B81CAB00B2AE20 /* AppDelegate.swift */; };
 		ECC5274222B81CAB00B2AE20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC5274022B81CAB00B2AE20 /* Main.storyboard */; };
 		ECC5274422B81CAC00B2AE20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC5274322B81CAC00B2AE20 /* Assets.xcassets */; };
 		ECC5274722B81CAC00B2AE20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC5274522B81CAC00B2AE20 /* LaunchScreen.storyboard */; };
-		ECC5275322B8262D00B2AE20 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275222B8262D00B2AE20 /* Network.swift */; };
-		ECC5275522B828EB00B2AE20 /* BalanceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275422B828EB00B2AE20 /* BalanceRequest.swift */; };
 		ECC5275722B82BC200B2AE20 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275622B82BC200B2AE20 /* SetupViewController.swift */; };
 		ECC5275922B8E12800B2AE20 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275822B8E12800B2AE20 /* RoundedButton.swift */; };
 		ECC5275B22B8E2A800B2AE20 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275A22B8E2A800B2AE20 /* Account.swift */; };
@@ -22,20 +20,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EC8256AE22BBBBD20034A028 /* Result+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extension.swift"; sourceTree = "<group>"; };
-		EC8256B022BBBDE40034A028 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
+		CA3E2E7EFC7FB07834DE9447 /* Pods_Gnosis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gnosis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC60D92522BBCF440006A934 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		ECC5273922B81CAB00B2AE20 /* Gnosis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gnosis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC5273C22B81CAB00B2AE20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC5274122B81CAB00B2AE20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECC5274322B81CAC00B2AE20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECC5274622B81CAC00B2AE20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECC5274822B81CAC00B2AE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ECC5275222B8262D00B2AE20 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		ECC5275422B828EB00B2AE20 /* BalanceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceRequest.swift; sourceTree = "<group>"; };
 		ECC5275622B82BC200B2AE20 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		ECC5275822B8E12800B2AE20 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		ECC5275A22B8E2A800B2AE20 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		ECC5276022B9268900B2AE20 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		F848ECB79A3BC80889F10940 /* Pods-Gnosis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gnosis.debug.xcconfig"; path = "Target Support Files/Pods-Gnosis/Pods-Gnosis.debug.xcconfig"; sourceTree = "<group>"; };
+		FE86322355998EC79F37C6B6 /* Pods-Gnosis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gnosis.release.xcconfig"; path = "Target Support Files/Pods-Gnosis/Pods-Gnosis.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +41,45 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADFC47811C2603276F5CE49A /* Pods_Gnosis.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75755D82A6A2B50586189271 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA3E2E7EFC7FB07834DE9447 /* Pods_Gnosis.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A45B0CD8BA25DC8F354C06DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F848ECB79A3BC80889F10940 /* Pods-Gnosis.debug.xcconfig */,
+				FE86322355998EC79F37C6B6 /* Pods-Gnosis.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EC60D92422BBCF340006A934 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				EC60D92522BBCF440006A934 /* Router.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		ECC5273022B81CAB00B2AE20 = {
 			isa = PBXGroup;
 			children = (
 				ECC5273B22B81CAB00B2AE20 /* Gnosis */,
 				ECC5273A22B81CAB00B2AE20 /* Products */,
+				A45B0CD8BA25DC8F354C06DE /* Pods */,
+				75755D82A6A2B50586189271 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,7 +94,7 @@
 		ECC5273B22B81CAB00B2AE20 /* Gnosis */ = {
 			isa = PBXGroup;
 			children = (
-				ECC5275122B8258F00B2AE20 /* Network */,
+				EC60D92422BBCF340006A934 /* Network */,
 				ECC5274822B81CAC00B2AE20 /* Info.plist */,
 				ECC5273C22B81CAB00B2AE20 /* AppDelegate.swift */,
 				ECC5274322B81CAC00B2AE20 /* Assets.xcassets */,
@@ -85,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				ECC5275A22B8E2A800B2AE20 /* Account.swift */,
-				EC8256B022BBBDE40034A028 /* Balance.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,16 +132,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		ECC5275122B8258F00B2AE20 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				ECC5275222B8262D00B2AE20 /* Network.swift */,
-				ECC5275422B828EB00B2AE20 /* BalanceRequest.swift */,
-				EC8256AE22BBBBD20034A028 /* Result+Extension.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECC5274B22B81CAC00B2AE20 /* Build configuration list for PBXNativeTarget "Gnosis" */;
 			buildPhases = (
+				82BCFBC07887D4B0503766DC /* [CP] Check Pods Manifest.lock */,
 				ECC5273522B81CAB00B2AE20 /* Sources */,
 				ECC5273622B81CAB00B2AE20 /* Frameworks */,
 				ECC5273722B81CAB00B2AE20 /* Resources */,
+				90B5F32BD4789ECD45A053CF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,6 +200,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		82BCFBC07887D4B0503766DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gnosis-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90B5F32BD4789ECD45A053CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gnosis/Pods-Gnosis-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gnosis/Pods-Gnosis-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gnosis/Pods-Gnosis-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ECC5273522B81CAB00B2AE20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -191,11 +250,8 @@
 				ECC5275722B82BC200B2AE20 /* SetupViewController.swift in Sources */,
 				ECC5275922B8E12800B2AE20 /* RoundedButton.swift in Sources */,
 				ECC5276122B9268900B2AE20 /* AccountViewController.swift in Sources */,
-				EC8256AF22BBBBD20034A028 /* Result+Extension.swift in Sources */,
-				EC8256B122BBBDE40034A028 /* Balance.swift in Sources */,
-				ECC5275322B8262D00B2AE20 /* Network.swift in Sources */,
 				ECC5273D22B81CAB00B2AE20 /* AppDelegate.swift in Sources */,
-				ECC5275522B828EB00B2AE20 /* BalanceRequest.swift in Sources */,
+				EC60D92622BBCF440006A934 /* Router.swift in Sources */,
 				ECC5275B22B8E2A800B2AE20 /* Account.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +396,7 @@
 		};
 		ECC5274C22B81CAC00B2AE20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F848ECB79A3BC80889F10940 /* Pods-Gnosis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
@@ -359,6 +416,7 @@
 		};
 		ECC5274D22B81CAC00B2AE20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE86322355998EC79F37C6B6 /* Pods-Gnosis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;

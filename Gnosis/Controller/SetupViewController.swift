@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import web3swift
 
 class SetupViewController: UIViewController {
     
@@ -21,42 +22,42 @@ class SetupViewController: UIViewController {
     @IBAction func setup(_ sender: RoundedButton) {
         guard let text = addressTextView.text else { return }
         
-        let balanceRequest = BalanceRequest(address: text)
+        sender.isUserInteractionEnabled = false
         
-        NetworkOperator().execute(request: balanceRequest) { [weak self] (result) in
-            switch result {
-            case .success(_):
-                do {
-                    let balance = try result.decodedObject() as Balance
-                    let account = Account(address: text,
-                                          balance: balance)
-                    
-                    let accountVC = self?.storyboard?.instantiateViewController(withIdentifier: "AccountVC") as! AccountViewController
-                    accountVC.account = account
-                    let navigationVC = UINavigationController(rootViewController: accountVC)
-                    navigationVC.navigationBar.barStyle = .blackOpaque
-                    navigationVC.navigationBar.barTintColor = UIColor(white: 0.1, alpha: 1.0)
-                    navigationVC.navigationBar.isTranslucent = false
-                    navigationVC.navigationBar.prefersLargeTitles = true
-                    
-                    DispatchQueue.main.async {
-                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                        appDelegate.window?.rootViewController = navigationVC
-                    }
-                } catch {
-                    debugPrint(error)
+        Router.shared.getBalance(address: text) { [weak self] (balance) in
+            DispatchQueue.main.async {
+                guard let balance = balance else {
+                    sender.isUserInteractionEnabled = true
+                    self?.presentAlert()
+                    return
                 }
-            case .failure(let error):
-                DispatchQueue.main.async {
-                    let alertController = UIAlertController(title: "Oops", message: "Check the address please", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "OK",
-                                                 style: .default,
-                                                 handler: nil)
-                    alertController.addAction(okAction)
-                    self?.present(alertController, animated: true, completion: nil)
-                }
-                debugPrint(error)
+                
+                self?.presentAccountViewController(address: text, balance: balance)
             }
         }
+    }
+    
+    private func presentAccountViewController(address: String, balance: String) {
+        let user = User(address: address, balance: balance)
+        
+        let accountVC = self.storyboard?.instantiateViewController(withIdentifier: "AccountVC") as! AccountViewController
+        accountVC.user = user
+        let navigationVC = UINavigationController(rootViewController: accountVC)
+        navigationVC.navigationBar.barStyle = .blackOpaque
+        navigationVC.navigationBar.barTintColor = UIColor(white: 0.1, alpha: 1.0)
+        navigationVC.navigationBar.isTranslucent = false
+        navigationVC.navigationBar.prefersLargeTitles = true
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = navigationVC
+    }
+    
+    private func presentAlert() {
+        let alertController = UIAlertController(title: "Oops", message: "Check the address please", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK",
+                                     style: .default,
+                                     handler: nil)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
     }
 }

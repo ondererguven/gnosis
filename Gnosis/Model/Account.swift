@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct Account {
+struct User {
     
     var address: String
-    var balance: Balance
+    var balance: String
     
 }

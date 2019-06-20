@@ -14,7 +14,7 @@ class AccountViewController: UIViewController {
     
     @IBOutlet weak var balanceLabel: UILabel!
     
-    var account: Account!
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +25,8 @@ class AccountViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        addressLabel.text = account.address
-        balanceLabel.text = "\(account.balance.amount) Ether"
+        addressLabel.text = user.address
+        balanceLabel.text = "\(user.balance) Ether"
     }
 
 }
