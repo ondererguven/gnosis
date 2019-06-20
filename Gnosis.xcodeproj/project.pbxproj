@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC8256AF22BBBBD20034A028 /* Result+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8256AE22BBBBD20034A028 /* Result+Extension.swift */; };
+		EC8256B122BBBDE40034A028 /* Balance.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8256B022BBBDE40034A028 /* Balance.swift */; };
 		ECC5273D22B81CAB00B2AE20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5273C22B81CAB00B2AE20 /* AppDelegate.swift */; };
 		ECC5274222B81CAB00B2AE20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC5274022B81CAB00B2AE20 /* Main.storyboard */; };
 		ECC5274422B81CAC00B2AE20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC5274322B81CAC00B2AE20 /* Assets.xcassets */; };
@@ -16,11 +18,12 @@
 		ECC5275722B82BC200B2AE20 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275622B82BC200B2AE20 /* SetupViewController.swift */; };
 		ECC5275922B8E12800B2AE20 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275822B8E12800B2AE20 /* RoundedButton.swift */; };
 		ECC5275B22B8E2A800B2AE20 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275A22B8E2A800B2AE20 /* Account.swift */; };
-		ECC5275D22B8EA7900B2AE20 /* BalanceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275C22B8EA7900B2AE20 /* BalanceResponse.swift */; };
 		ECC5276122B9268900B2AE20 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5276022B9268900B2AE20 /* AccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC8256AE22BBBBD20034A028 /* Result+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+Extension.swift"; sourceTree = "<group>"; };
+		EC8256B022BBBDE40034A028 /* Balance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Balance.swift; sourceTree = "<group>"; };
 		ECC5273922B81CAB00B2AE20 /* Gnosis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gnosis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC5273C22B81CAB00B2AE20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC5274122B81CAB00B2AE20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -32,7 +35,6 @@
 		ECC5275622B82BC200B2AE20 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		ECC5275822B8E12800B2AE20 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		ECC5275A22B8E2A800B2AE20 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
-		ECC5275C22B8EA7900B2AE20 /* BalanceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceResponse.swift; sourceTree = "<group>"; };
 		ECC5276022B9268900B2AE20 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				ECC5275A22B8E2A800B2AE20 /* Account.swift */,
+				EC8256B022BBBDE40034A028 /* Balance.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,7 +112,7 @@
 			children = (
 				ECC5275222B8262D00B2AE20 /* Network.swift */,
 				ECC5275422B828EB00B2AE20 /* BalanceRequest.swift */,
-				ECC5275C22B8EA7900B2AE20 /* BalanceResponse.swift */,
+				EC8256AE22BBBBD20034A028 /* Result+Extension.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -188,11 +191,12 @@
 				ECC5275722B82BC200B2AE20 /* SetupViewController.swift in Sources */,
 				ECC5275922B8E12800B2AE20 /* RoundedButton.swift in Sources */,
 				ECC5276122B9268900B2AE20 /* AccountViewController.swift in Sources */,
+				EC8256AF22BBBBD20034A028 /* Result+Extension.swift in Sources */,
+				EC8256B122BBBDE40034A028 /* Balance.swift in Sources */,
 				ECC5275322B8262D00B2AE20 /* Network.swift in Sources */,
 				ECC5273D22B81CAB00B2AE20 /* AppDelegate.swift in Sources */,
 				ECC5275522B828EB00B2AE20 /* BalanceRequest.swift in Sources */,
 				ECC5275B22B8E2A800B2AE20 /* Account.swift in Sources */,
-				ECC5275D22B8EA7900B2AE20 /* BalanceResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
