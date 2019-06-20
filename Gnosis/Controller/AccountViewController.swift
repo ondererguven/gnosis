@@ -18,6 +18,8 @@ class AccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         title = "Account"
     }
@@ -28,5 +30,14 @@ class AccountViewController: UIViewController {
         addressLabel.text = user.address
         balanceLabel.text = "\(user.balance) Ether"
     }
-
+    
+    @IBAction func compose(_ sender: RoundedButton) {
+        let messageComposeVC = self.storyboard?.instantiateViewController(withIdentifier: "MessageComposeVC") as! MessageComposeViewController
+        navigationController?.pushViewController(messageComposeVC, animated: true)
+    }
+    
+    @IBAction func verify(_ sender: RoundedButton) {
+        
+    }
+    
 }

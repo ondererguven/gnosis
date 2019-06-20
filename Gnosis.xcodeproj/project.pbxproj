@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ADFC47811C2603276F5CE49A /* Pods_Gnosis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3E2E7EFC7FB07834DE9447 /* Pods_Gnosis.framework */; };
 		EC60D92622BBCF440006A934 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC60D92522BBCF440006A934 /* Router.swift */; };
+		EC60D92822BBD8AC0006A934 /* MessageComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC60D92722BBD8AC0006A934 /* MessageComposeViewController.swift */; };
 		ECC5273D22B81CAB00B2AE20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5273C22B81CAB00B2AE20 /* AppDelegate.swift */; };
 		ECC5274222B81CAB00B2AE20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC5274022B81CAB00B2AE20 /* Main.storyboard */; };
 		ECC5274422B81CAC00B2AE20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC5274322B81CAC00B2AE20 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		CA3E2E7EFC7FB07834DE9447 /* Pods_Gnosis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gnosis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC60D92522BBCF440006A934 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		EC60D92722BBD8AC0006A934 /* MessageComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageComposeViewController.swift; sourceTree = "<group>"; };
 		ECC5273922B81CAB00B2AE20 /* Gnosis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gnosis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC5273C22B81CAB00B2AE20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC5274122B81CAB00B2AE20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			children = (
 				ECC5275622B82BC200B2AE20 /* SetupViewController.swift */,
 				ECC5276022B9268900B2AE20 /* AccountViewController.swift */,
+				EC60D92722BBD8AC0006A934 /* MessageComposeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			files = (
 				ECC5275722B82BC200B2AE20 /* SetupViewController.swift in Sources */,
 				ECC5275922B8E12800B2AE20 /* RoundedButton.swift in Sources */,
+				EC60D92822BBD8AC0006A934 /* MessageComposeViewController.swift in Sources */,
 				ECC5276122B9268900B2AE20 /* AccountViewController.swift in Sources */,
 				ECC5273D22B81CAB00B2AE20 /* AppDelegate.swift in Sources */,
 				EC60D92622BBCF440006A934 /* Router.swift in Sources */,
