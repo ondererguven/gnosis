@@ -9,11 +9,24 @@
 import UIKit
 
 class AccountViewController: UIViewController {
+    
+    @IBOutlet weak var addressLabel: UILabel!
+    
+    @IBOutlet weak var balanceLabel: UILabel!
+    
+    var account: Account!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = "Account"
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        addressLabel.text = account.address
+        balanceLabel.text = "\(account.balance.amount) Ether"
     }
 
 }

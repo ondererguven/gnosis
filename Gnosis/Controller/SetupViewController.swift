@@ -23,33 +23,38 @@ class SetupViewController: UIViewController {
         
         let balanceRequest = BalanceRequest(address: text)
         
-        NetworkOperator().execute(request: balanceRequest)
-        { (result) in
+        NetworkOperator().execute(request: balanceRequest) { [weak self] (result) in
             switch result {
-            case .success(let data):
+            case .success(_):
                 do {
-                    let balanceResponse = try JSONDecoder().decode(BalanceResponse.self,
-                                                                   from: data)
+                    let balance = try result.decodedObject() as Balance
+                    let account = Account(address: text,
+                                          balance: balance)
                     
-                    if balanceResponse.message == "OK" && balanceResponse.status == "1" {
-                        let account = Account(address: text,
-                                              balance: balanceResponse.amount)
-                        debugPrint(account)
-                    } else {
-                        DispatchQueue.main.async {
-                            let alertController = UIAlertController(title: "Oops", message: "Check the address please", preferredStyle: .alert)
-                            let okAction = UIAlertAction(title: "OK",
-                                                         style: .default,
-                                                         handler: nil)
-                            alertController.addAction(okAction)
-                            self.present(alertController, animated: true, completion: nil)
-                        }
+                    let accountVC = self?.storyboard?.instantiateViewController(withIdentifier: "AccountVC") as! AccountViewController
+                    accountVC.account = account
+                    let navigationVC = UINavigationController(rootViewController: accountVC)
+                    navigationVC.navigationBar.barStyle = .blackOpaque
+                    navigationVC.navigationBar.barTintColor = UIColor(white: 0.1, alpha: 1.0)
+                    navigationVC.navigationBar.isTranslucent = false
+                    navigationVC.navigationBar.prefersLargeTitles = true
+                    
+                    DispatchQueue.main.async {
+                        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                        appDelegate.window?.rootViewController = navigationVC
                     }
-                    
                 } catch {
                     debugPrint(error)
                 }
             case .failure(let error):
+                DispatchQueue.main.async {
+                    let alertController = UIAlertController(title: "Oops", message: "Check the address please", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK",
+                                                 style: .default,
+                                                 handler: nil)
+                    alertController.addAction(okAction)
+                    self?.present(alertController, animated: true, completion: nil)
+                }
                 debugPrint(error)
             }
         }

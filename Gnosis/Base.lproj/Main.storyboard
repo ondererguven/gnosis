@@ -49,7 +49,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="0x" translatesAutoresizingMaskIntoConstraints="NO" id="8h2-6e-Zcy">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8h2-6e-Zcy">
                                 <rect key="frame" x="16" y="376" width="382" height="48"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <constraints>
@@ -93,41 +93,87 @@
             <objects>
                 <viewController storyboardIdentifier="AccountVC" id="GUf-Pi-O1e" customClass="AccountViewController" customModule="Gnosis" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TB8-xy-lnp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHw-q6-wdi">
+                                <rect key="frame" x="16" y="76" width="382" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0x111222AAABBB" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6S-Fh-6Za">
+                                <rect key="frame" x="16" y="123.5" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxi-jI-Pxa">
+                                <rect key="frame" x="16" y="208" width="382" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99999" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8at-OE-5Xs">
+                                <rect key="frame" x="16" y="255.5" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="ZE0-ZG-DMb">
+                                <rect key="frame" x="24" y="340" width="366" height="53"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="gyh-g9-QQb" customClass="RoundedButton" customModule="Gnosis" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="171" height="53"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
+                                        <state key="normal" title="Write Message">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOq-EL-9ND" customClass="RoundedButton" customModule="Gnosis" customModuleProvider="target">
+                                        <rect key="frame" x="195" y="0.0" width="171" height="53"/>
+                                        <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <inset key="contentEdgeInsets" minX="16" minY="16" maxX="16" maxY="16"/>
+                                        <state key="normal" title="Verify Message">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZE0-ZG-DMb" firstAttribute="centerX" secondItem="TB8-xy-lnp" secondAttribute="centerX" id="21Y-81-yS2"/>
+                            <constraint firstItem="gxX-SK-fne" firstAttribute="trailing" secondItem="ZE0-ZG-DMb" secondAttribute="trailing" constant="24" id="9NA-cT-Gja"/>
+                            <constraint firstItem="gxX-SK-fne" firstAttribute="trailing" secondItem="dxi-jI-Pxa" secondAttribute="trailing" constant="16" id="BSj-ay-W4q"/>
+                            <constraint firstItem="M6S-Fh-6Za" firstAttribute="leading" secondItem="gxX-SK-fne" secondAttribute="leading" constant="16" id="LHa-hF-fib"/>
+                            <constraint firstItem="gxX-SK-fne" firstAttribute="trailing" secondItem="QHw-q6-wdi" secondAttribute="trailing" constant="16" id="LPd-jO-weR"/>
+                            <constraint firstItem="ZE0-ZG-DMb" firstAttribute="leading" secondItem="gxX-SK-fne" secondAttribute="leading" constant="24" id="TZQ-0G-eC6"/>
+                            <constraint firstItem="8at-OE-5Xs" firstAttribute="leading" secondItem="gxX-SK-fne" secondAttribute="leading" constant="16" id="Ut4-NS-eJP"/>
+                            <constraint firstItem="QHw-q6-wdi" firstAttribute="leading" secondItem="gxX-SK-fne" secondAttribute="leading" constant="16" id="XE3-lg-ufK"/>
+                            <constraint firstItem="QHw-q6-wdi" firstAttribute="top" secondItem="gxX-SK-fne" secondAttribute="top" constant="32" id="gse-ed-1SK"/>
+                            <constraint firstItem="gxX-SK-fne" firstAttribute="trailing" secondItem="8at-OE-5Xs" secondAttribute="trailing" constant="16" id="ibR-lI-MDs"/>
+                            <constraint firstItem="8at-OE-5Xs" firstAttribute="top" secondItem="dxi-jI-Pxa" secondAttribute="bottom" constant="16" id="jER-XC-xuY"/>
+                            <constraint firstItem="dxi-jI-Pxa" firstAttribute="top" secondItem="M6S-Fh-6Za" secondAttribute="bottom" constant="64" id="lLo-49-Iwl"/>
+                            <constraint firstItem="dxi-jI-Pxa" firstAttribute="leading" secondItem="gxX-SK-fne" secondAttribute="leading" constant="16" id="nVL-Da-sbw"/>
+                            <constraint firstItem="M6S-Fh-6Za" firstAttribute="top" secondItem="QHw-q6-wdi" secondAttribute="bottom" constant="16" id="qQi-Qz-7yX"/>
+                            <constraint firstItem="gxX-SK-fne" firstAttribute="trailing" secondItem="M6S-Fh-6Za" secondAttribute="trailing" constant="16" id="vWh-v6-8VA"/>
+                            <constraint firstItem="ZE0-ZG-DMb" firstAttribute="top" secondItem="8at-OE-5Xs" secondAttribute="bottom" constant="64" id="vfu-Nt-bv9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gxX-SK-fne"/>
                     </view>
                     <navigationItem key="navigationItem" id="F7x-bd-kTJ"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="M6S-Fh-6Za" id="jSF-Mr-wBe"/>
+                        <outlet property="balanceLabel" destination="8at-OE-5Xs" id="1aQ-yG-9Lh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKf-Al-cO9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2170" y="21"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="61H-V0-lI9">
-            <objects>
-                <navigationController storyboardIdentifier="MainNavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="gob-Kh-9K3" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="gj4-eB-c5e">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="GUf-Pi-O1e" kind="relationship" relationship="rootViewController" id="QdN-XV-4TW"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Aww-gI-P3a" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1359" y="21"/>
+            <point key="canvasLocation" x="1180" y="21"/>
         </scene>
     </scenes>
 </document>

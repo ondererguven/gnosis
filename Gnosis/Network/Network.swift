@@ -28,11 +28,6 @@ protocol RequestDescribing {
     func buildURL() -> URL?
 }
 
-protocol ResponseDescribing {
-    var status: String { get set }
-    var message: String { get set }
-}
-
 enum RequestError: Error {
     case badURL
 }
@@ -49,7 +44,7 @@ struct NetworkOperator {
     init() { }
     
     func execute(request: RequestDescribing,
-                                        completion: @escaping ((Result<Data, Error>) -> Void))
+                 completion: @escaping ((Result<Data, Error>) -> Void))
     {
         guard let requestURL = request.buildURL() else {
             completion(.failure(RequestError.badURL))
