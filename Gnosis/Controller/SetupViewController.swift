@@ -11,35 +11,53 @@ import web3swift
 
 class SetupViewController: UIViewController {
     
-    @IBOutlet weak var addressTextView: UITextView!
+    @IBOutlet weak var privateKeyTextView: UITextView!
+    
+    var user = User(privateKey: "", address: "", balance: "")
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        addressTextView.becomeFirstResponder()
+        privateKeyTextView.becomeFirstResponder()
     }
     
     @IBAction func setup(_ sender: RoundedButton) {
-        guard let text = addressTextView.text else { return }
+        guard let privateKeyText = privateKeyTextView.text else { return }
         
         sender.isUserInteractionEnabled = false
         
-        Router.shared.getBalance(address: text) { [weak self] (balance) in
-            DispatchQueue.main.async {
-                guard let balance = balance else {
-                    sender.isUserInteractionEnabled = true
-                    self?.presentAlert()
-                    return
-                }
-                
-                self?.presentAccountViewController(address: text, balance: balance)
+        user.privateKey = privateKeyText
+        
+        do {
+            try Router.shared.setKeytore(for: user)
+            
+            guard let address = Router.shared.getAddress() else {
+                sender.isUserInteractionEnabled = true
+                return
             }
+            
+            user.address = address
+            
+            Router.shared.getBalance(address: user.address)
+            { [weak self] (balance) in
+                DispatchQueue.main.async {
+                    guard let balance = balance else {
+                        sender.isUserInteractionEnabled = true
+                        self?.presentAlert()
+                        return
+                    }
+                    
+                    self?.user.balance = balance
+                    
+                    self?.presentAccountViewController()
+                }
+            }
+        } catch {
+            debugPrint(error)
         }
     }
     
-    private func presentAccountViewController(address: String, balance: String) {
-        let user = User(address: address, balance: balance)
-        
+    private func presentAccountViewController() {
         let accountVC = self.storyboard?.instantiateViewController(withIdentifier: "AccountVC") as! AccountViewController
         accountVC.user = user
         let navigationVC = UINavigationController(rootViewController: accountVC)

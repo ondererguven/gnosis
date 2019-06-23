@@ -10,6 +10,7 @@ import Foundation
 
 struct User {
     
+    var privateKey: String
     var address: String
     var balance: String
     
