@@ -19,8 +19,6 @@ class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-
         title = "Account"
     }
     
@@ -33,11 +31,14 @@ class AccountViewController: UIViewController {
     
     @IBAction func compose(_ sender: RoundedButton) {
         let messageComposeVC = self.storyboard?.instantiateViewController(withIdentifier: "MessageComposeVC") as! MessageComposeViewController
+        messageComposeVC.user = user
         navigationController?.pushViewController(messageComposeVC, animated: true)
     }
     
     @IBAction func verify(_ sender: RoundedButton) {
-        
+        let messageVerifyVC = self.storyboard?.instantiateViewController(withIdentifier: "MessageVerifyVC") as! MessageVerifyViewController
+        messageVerifyVC.user = user
+        navigationController?.pushViewController(messageVerifyVC, animated: true)
     }
     
 }

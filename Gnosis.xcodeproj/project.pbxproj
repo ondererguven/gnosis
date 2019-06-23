@@ -10,13 +10,16 @@
 		ADFC47811C2603276F5CE49A /* Pods_Gnosis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3E2E7EFC7FB07834DE9447 /* Pods_Gnosis.framework */; };
 		EC60D92622BBCF440006A934 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC60D92522BBCF440006A934 /* Router.swift */; };
 		EC60D92822BBD8AC0006A934 /* MessageComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC60D92722BBD8AC0006A934 /* MessageComposeViewController.swift */; };
+		ECAD11D422BFCD27005C9C23 /* QRGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD11D322BFCD27005C9C23 /* QRGenerator.swift */; };
+		ECAD11D622BFCEC5005C9C23 /* MessageVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD11D522BFCEC5005C9C23 /* MessageVerifyViewController.swift */; };
+		ECAD11D822BFCF9A005C9C23 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECAD11D722BFCF9A005C9C23 /* CameraViewController.swift */; };
 		ECC5273D22B81CAB00B2AE20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5273C22B81CAB00B2AE20 /* AppDelegate.swift */; };
 		ECC5274222B81CAB00B2AE20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC5274022B81CAB00B2AE20 /* Main.storyboard */; };
 		ECC5274422B81CAC00B2AE20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC5274322B81CAC00B2AE20 /* Assets.xcassets */; };
 		ECC5274722B81CAC00B2AE20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC5274522B81CAC00B2AE20 /* LaunchScreen.storyboard */; };
 		ECC5275722B82BC200B2AE20 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275622B82BC200B2AE20 /* SetupViewController.swift */; };
 		ECC5275922B8E12800B2AE20 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275822B8E12800B2AE20 /* RoundedButton.swift */; };
-		ECC5275B22B8E2A800B2AE20 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275A22B8E2A800B2AE20 /* Account.swift */; };
+		ECC5275B22B8E2A800B2AE20 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5275A22B8E2A800B2AE20 /* User.swift */; };
 		ECC5276122B9268900B2AE20 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC5276022B9268900B2AE20 /* AccountViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +27,9 @@
 		CA3E2E7EFC7FB07834DE9447 /* Pods_Gnosis.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gnosis.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC60D92522BBCF440006A934 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		EC60D92722BBD8AC0006A934 /* MessageComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageComposeViewController.swift; sourceTree = "<group>"; };
+		ECAD11D322BFCD27005C9C23 /* QRGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGenerator.swift; sourceTree = "<group>"; };
+		ECAD11D522BFCEC5005C9C23 /* MessageVerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageVerifyViewController.swift; sourceTree = "<group>"; };
+		ECAD11D722BFCF9A005C9C23 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		ECC5273922B81CAB00B2AE20 /* Gnosis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gnosis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC5273C22B81CAB00B2AE20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECC5274122B81CAB00B2AE20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -32,7 +38,7 @@
 		ECC5274822B81CAC00B2AE20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECC5275622B82BC200B2AE20 /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		ECC5275822B8E12800B2AE20 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
-		ECC5275A22B8E2A800B2AE20 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		ECC5275A22B8E2A800B2AE20 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ECC5276022B9268900B2AE20 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		F848ECB79A3BC80889F10940 /* Pods-Gnosis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gnosis.debug.xcconfig"; path = "Target Support Files/Pods-Gnosis/Pods-Gnosis.debug.xcconfig"; sourceTree = "<group>"; };
 		FE86322355998EC79F37C6B6 /* Pods-Gnosis.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gnosis.release.xcconfig"; path = "Target Support Files/Pods-Gnosis/Pods-Gnosis.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +81,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		ECAD11D222BFCD1A005C9C23 /* QRGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				ECAD11D322BFCD27005C9C23 /* QRGenerator.swift */,
+			);
+			path = QRGenerator;
+			sourceTree = "<group>";
+		};
 		ECC5273022B81CAB00B2AE20 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +110,7 @@
 		ECC5273B22B81CAB00B2AE20 /* Gnosis */ = {
 			isa = PBXGroup;
 			children = (
+				ECAD11D222BFCD1A005C9C23 /* QRGenerator */,
 				EC60D92422BBCF340006A934 /* Network */,
 				ECC5274822B81CAC00B2AE20 /* Info.plist */,
 				ECC5273C22B81CAB00B2AE20 /* AppDelegate.swift */,
@@ -112,7 +127,7 @@
 		ECC5274E22B81DFA00B2AE20 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ECC5275A22B8E2A800B2AE20 /* Account.swift */,
+				ECC5275A22B8E2A800B2AE20 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -131,6 +146,8 @@
 				ECC5275622B82BC200B2AE20 /* SetupViewController.swift */,
 				ECC5276022B9268900B2AE20 /* AccountViewController.swift */,
 				EC60D92722BBD8AC0006A934 /* MessageComposeViewController.swift */,
+				ECAD11D522BFCEC5005C9C23 /* MessageVerifyViewController.swift */,
+				ECAD11D722BFCF9A005C9C23 /* CameraViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -251,12 +268,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECC5275722B82BC200B2AE20 /* SetupViewController.swift in Sources */,
+				ECAD11D822BFCF9A005C9C23 /* CameraViewController.swift in Sources */,
 				ECC5275922B8E12800B2AE20 /* RoundedButton.swift in Sources */,
 				EC60D92822BBD8AC0006A934 /* MessageComposeViewController.swift in Sources */,
 				ECC5276122B9268900B2AE20 /* AccountViewController.swift in Sources */,
+				ECAD11D622BFCEC5005C9C23 /* MessageVerifyViewController.swift in Sources */,
 				ECC5273D22B81CAB00B2AE20 /* AppDelegate.swift in Sources */,
 				EC60D92622BBCF440006A934 /* Router.swift in Sources */,
-				ECC5275B22B8E2A800B2AE20 /* Account.swift in Sources */,
+				ECAD11D422BFCD27005C9C23 /* QRGenerator.swift in Sources */,
+				ECC5275B22B8E2A800B2AE20 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,8 +423,9 @@
 			baseConfigurationReference = F848ECB79A3BC80889F10940 /* Pods-Gnosis.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 692X4U2P9G;
 				INFOPLIST_FILE = Gnosis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -423,8 +444,9 @@
 			baseConfigurationReference = FE86322355998EC79F37C6B6 /* Pods-Gnosis.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 692X4U2P9G;
 				INFOPLIST_FILE = Gnosis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
